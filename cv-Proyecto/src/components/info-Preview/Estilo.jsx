@@ -1,30 +1,47 @@
-export default function Estilo() {
+export default function Estilo({ estiloHandlers, estilo }) {
+  const [color, font] = estilo;
+  const [setColor, setFont] = estiloHandlers;
+
   return (
-    <div className="flex items-center flex-col gap-4">
+    <div
+      className="flex items-center flex-col gap-4"
+      role="tabpanel"
+      id="estilo"
+    >
       <section>
         <h3>Color</h3>
         <label>
           Selecciona tu Color Favorito
-          <input type="color" />
+          <input
+            type="color"
+            value={color}
+            onChange={(e) => setColor(e.target.value)}
+          />
         </label>
       </section>
       <section>
         <h3>Fuentes</h3>
         <div className="flex gap-2">
-          <button data-font="serif">
+          <button
+            className={font === "serif" ? "selected " : ""}
+            data-font="serif"
+            onClick={() => setFont("serif")}
+          >
             <span>aA</span>
             <span>Serif</span>
           </button>
           <button
-
-          // data-font="sans"
+            className={font === "sans" ? "selected " : ""}
+            data-font="sans"
+            onClick={() => setFont("sans-serif")}
           >
             <span>aA</span>
             <span>Sans</span>
           </button>
           <button
-
-          // data-font="mono"
+            className={font === "mono" ? "selected " : ""}
+            data-font="mono"
+            onClick={() => setFont("monospace")}
           >
             <span>aA</span>
             <span>Mono</span>

@@ -1,17 +1,17 @@
-export const INFOPREVIEW = ["Estilo", "General", "Imagenes", "InfoGeneral"];
+export const PESTANAS = ["Estilo", "General", "Imagenes", "InfoGeneral"];
 
 export const EJEMPLO = {
   nombre: "Lazaro",
   apellido: "Flores",
   telefono: "(+57) 300-1000-000",
   email: "example@example.com",
-  UrlImagen: "perfilCV.avif",
+  imagenPerfil: "perfilCV.avif",
   puestoTrabajo: "Desarrollador Web",
   ubicacion: "Palmira, Colombia",
   experiencia: [
     {
       nombre: "Cagliostro",
-      empresa: "Cagliostro S.A.",
+      institucion: "Cagliostro S.A.",
       fechaInicio: "Ejemplo",
       fechaFinal: "Ejemplo",
       descripcion:
